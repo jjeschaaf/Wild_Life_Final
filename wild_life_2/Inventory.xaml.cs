@@ -76,6 +76,7 @@ namespace wild_life_2
         private List<string> inventory;
         private string selectedItem;
 
+        public bool AppelGegeten { get; private set; } = false;
         public Inventory(List<string> inventory)
         {
             InitializeComponent();
@@ -131,6 +132,8 @@ namespace wild_life_2
             if (selectedItem == "Appel")
             {
                 inventory.Remove(selectedItem);
+                AppelGegeten = true;
+
 
                 MessageBox.Show("Appel gegeten!");
 

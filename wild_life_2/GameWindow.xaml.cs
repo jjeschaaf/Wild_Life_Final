@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -42,10 +43,26 @@ namespace wild_life_2
 
             if (e.Key == Key.Down)
                 Canvas.SetTop(Player, y + 10);
+
+            
+            //3. Naar level 2. Als de appel is gegeten, wordt GameWindow2 geopend en wordt het eerste level gesloten. Is de appel niet gegeten? Dan blijf je gewoon in level 1.
+            
             if (e.Key == Key.I)
             {
-                Inventory inventoryWindow =
-                    new Inventory(inventory);
+                Inventory inventoryWindow = new Inventory(inventory);
+
+                inventoryWindow.Closed += (s, args) => //1. Inventory sluiten. De Closed-gebeurtenis wacht totdat het inventoryvenster daadwerkelijk gesloten is.
+                {
+                    if (inventoryWindow.AppelGegeten) //2.Controleren of de appel is gegeten, 'if (inventoryWindow.AppelGegeten)' controleert de status die je in stap 1 hebt toegevoegd.
+
+                    {
+                        GameWindow2 volgendLevel = new GameWindow2();  //3. Naar level 2. Als de appel is gegeten, wordt GameWindow2 geopend en wordt het eerste level gesloten. Is de appel niet gegeten? Dan blijf je gewoon in level 1.
+
+                        volgendLevel.Show();
+
+                        this.Close();
+                    }
+                };
 
                 inventoryWindow.Show();
             }
