@@ -23,3 +23,4 @@ C:\Users\jjesc\source\repos\wild_life_2\wild_life_2\obj\Debug\net10.0-windows\re
 C:\Users\jjesc\source\repos\wild_life_2\wild_life_2\obj\Debug\net10.0-windows\wild_lif.F2564103.Up2Date
 C:\Users\jjesc\source\repos\wild_life_2\wild_life_2\obj\Debug\net10.0-windows\Inventory.g.cs
 C:\Users\jjesc\source\repos\wild_life_2\wild_life_2\obj\Debug\net10.0-windows\Inventory.baml
+C:\Users\jjesc\source\repos\wild_life_2\wild_life_2\obj\Debug\net10.0-windows\wild_life_2.sourcelink.json

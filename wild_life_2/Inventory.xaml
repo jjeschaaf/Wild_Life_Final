@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:wild_life_2"
         mc:Ignorable="d"
         Title="Inventory" Height="450" Width="800">
+
     <Grid Background="BurlyWood">
 
         <Grid.ColumnDefinitions>
@@ -13,7 +14,7 @@
             <ColumnDefinition Width="3*" />
         </Grid.ColumnDefinitions>
 
-        <!-- LINKERKANT INVENTARIS -->
+        <!-- INVENTARIS -->
         <Border Grid.Column="0"
                 BorderBrush="Black"
                 BorderThickness="2"
@@ -21,23 +22,10 @@
 
             <UniformGrid x:Name="InventoryGrid"
                          Columns="5"
-                         Margin="10">
-
-                <Button Content="🍎"
-                        Click="InventoryItem_Click"/>
-
-                <Button Content=""
-                        IsEnabled="False"/>
-
-                <Button Content=""
-                        IsEnabled="False"/>
-
-            </UniformGrid>
-
+                         Margin="10"/>
         </Border>
 
-
-        <!-- RECHTERKANT ITEM DETAILS -->
+        <!-- DETAILS -->
         <Grid Grid.Column="1"
               Margin="10">
 
@@ -67,12 +55,12 @@
                     Margin="5">
 
                 <TextBlock x:Name="ItemInfoText"
-                           TextWrapping="Wrap"
+                           Margin="10"
                            FontSize="18"
-                           Margin="10"/>
+                           TextWrapping="Wrap"/>
             </Border>
 
-            <!-- Actie knop -->
+            <!-- Eten knop -->
             <Button Grid.Row="2"
                     x:Name="EatButton"
                     Content="Eten"
@@ -80,7 +68,6 @@
                     Margin="5"
                     IsEnabled="False"
                     Click="EatButton_Click"/>
-
         </Grid>
 
     </Grid>
