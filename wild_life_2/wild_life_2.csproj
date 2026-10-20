@@ -14,6 +14,8 @@
     <None Remove="Images\FemaleCharacter\00_FemaleCharacter.png" />
     <None Remove="Images\Fruit_appel\00_Fruit+.png" />
     <None Remove="Images\WildLifeStartScherm2.png" />
+    <None Remove="red apple.png" />
+    <None Remove="tile_0001.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +32,8 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WildLifeStartScherm2.png" />
+    <Resource Include="red apple.png" />
+    <Resource Include="tile_0001.png" />
   </ItemGroup>
 
 </Project>

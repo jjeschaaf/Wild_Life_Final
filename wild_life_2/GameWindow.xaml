@@ -40,19 +40,20 @@
        Width="50"
        Height="50"
        Stretch="Uniform"
-       Canvas.Left="100"
-       Canvas.Top="100"
+       Canvas.Left="351"
+       Canvas.Top="167"
        RenderOptions.BitmapScalingMode="NearestNeighbor"/>
 
 
         <Image x:Name="Vrucht"
-              Source="/Images/Basic biome/02_Basic Grass Biom things 1.png"
+              Source="/red apple.png"
               Width="30"
               Height="30"
               Stretch="Uniform"
               RenderOptions.BitmapScalingMode="NearestNeighbor"
               Canvas.Left="600"
               Canvas.Top="100"/>
+
 
     </Canvas>
 </Window>
