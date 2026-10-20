@@ -89,7 +89,7 @@ namespace wild_life_2
                 inventory.Add("Appel");
 
                 GameCanvas.Children.Remove(Vrucht);
-
+                InstructionText.Text = "Je hebt de vrucht opgepakt! Klik op I om je inventory te openen.";
                 MessageBox.Show("Appel opgepakt!");
             }
         }

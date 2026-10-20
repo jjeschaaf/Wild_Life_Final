@@ -135,7 +135,11 @@ namespace wild_life_2
                 AppelGegeten = true;
 
 
-                MessageBox.Show("Appel gegeten!");
+                MessageBox.Show( 
+                "Goed! Sluit je inventory om naar het volgende level te gaan.",
+                "Goed gedaan!",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information);
 
                 selectedItem = null;
 
