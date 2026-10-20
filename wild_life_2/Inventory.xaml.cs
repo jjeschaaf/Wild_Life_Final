@@ -15,7 +15,7 @@ namespace wild_life_2
     /// <summary>
     /// Interaction logic for Inventory.xaml
     /// </summary>
-    public partial class Inventory : Window
+    /*public partial class Inventory : Window
     {
 
         private List<string> inventory;
@@ -69,5 +69,80 @@ namespace wild_life_2
                 EatButton.IsEnabled = true;
             }
         }
+    }*/
+
+    public partial class Inventory : Window
+    {
+        private List<string> inventory;
+        private string selectedItem;
+
+        public Inventory(List<string> inventory)
+        {
+            InitializeComponent();
+
+            this.inventory = inventory;
+
+            RefreshInventory();
+        }
+
+        private void RefreshInventory()
+        {
+            InventoryGrid.Children.Clear();
+
+            foreach (string item in inventory)
+            {
+                Button button = new Button();
+
+                button.Content = item;
+                button.Margin = new Thickness(5);
+                button.Click += InventoryItem_Click;
+
+                InventoryGrid.Children.Add(button);
+            }
+        }
+
+        private void InventoryItem_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+
+            selectedItem = button.Content.ToString();
+
+            ItemNameText.Text = selectedItem;
+
+            if (selectedItem == "Appel")
+            {
+                ItemInfoText.Text =
+                    "Een verse appel.\nHerstelt 10 gezondheid.";
+
+                EatButton.IsEnabled = true;
+            }
+            else
+            {
+                ItemInfoText.Text = "";
+                EatButton.IsEnabled = false;
+            }
+        }
+
+        private void EatButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (selectedItem == null)
+                return;
+
+            if (selectedItem == "Appel")
+            {
+                inventory.Remove(selectedItem);
+
+                MessageBox.Show("Appel gegeten!");
+
+                selectedItem = null;
+
+                ItemNameText.Text = "Selecteer een item";
+                ItemInfoText.Text = "";
+                EatButton.IsEnabled = false;
+
+                RefreshInventory();
+            }
+        }
     }
+
 }
