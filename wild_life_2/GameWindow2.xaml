@@ -1,0 +1,28 @@
+﻿<Window x:Class="wild_life_2.GameWindow2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wild_life_2"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="450" Width="800">
+    <Canvas x:Name="GameCanvas" Background="LightGreen">
+
+        <Rectangle
+            x:Name="Player"
+            Width="50"
+            Height="50"
+            Fill="Blue"
+            Canvas.Left="100"
+            Canvas.Top="100"/>
+
+        <Rectangle
+    x:Name="Vrucht"
+    Width="50"
+    Height="50"
+    Fill="Purple"
+    Canvas.Left="600"
+    Canvas.Top="100"/>
+
+    </Canvas>
+</Window>

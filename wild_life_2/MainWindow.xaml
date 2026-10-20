@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:wild_life_2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-        <Grid>
+    <Grid>
 
         <Image
         Source="/Images/WildLifeStartScherm2.png"
@@ -96,6 +96,4 @@
         </StackPanel>
 
     </Grid>
-</Window>
-
 </Window>
