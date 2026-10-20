@@ -8,6 +8,32 @@
         Title="GameWindow" Height="450" Width="800">
     <Canvas x:Name="GameCanvas" Background="LightGreen">
 
+        <Border x:Name="InstructionBubble"
+        Canvas.Left="15"
+        Canvas.Bottom="15"
+        Canvas.ZIndex="10"
+        Width="280"
+        Padding="14"
+        Background="#FFFFF8E7"
+        BorderBrush="#FF78A66A"
+        BorderThickness="2"
+        CornerRadius="18">
+
+            <StackPanel>
+                <TextBlock Text="🌿 WILD LIFE"
+                   FontSize="16"
+                   FontWeight="Bold"
+                   Foreground="#FF426B3C"
+                   Margin="0,0,0,8"/>
+
+                <TextBlock x:Name="InstructionText"
+                   Text="Welkom, avonturier! Loop naar de appel toe. Gebruik de pijltjestoetsen om te bewegen."
+                   FontSize="14"
+                   Foreground="#FF35452F"
+                   TextWrapping="Wrap"/>
+            </StackPanel>
+        </Border>
+
         <Rectangle
             x:Name="Player"
             Width="50"
