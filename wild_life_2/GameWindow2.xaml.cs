@@ -18,7 +18,7 @@ namespace wild_life_2
     public partial class GameWindow2 : Window
     {
         private List<string> inventory = new();
-
+        private int houtAantal = 0;
         public GameWindow2()
         {
             InitializeComponent();
@@ -42,6 +42,10 @@ namespace wild_life_2
 
             if (e.Key == Key.Down)
                 Canvas.SetTop(Player, y + 10);
+
+            CheckHoutPickup();
+
+
             if (e.Key == Key.I)
             {
                 Inventory inventoryWindow =
@@ -49,32 +53,54 @@ namespace wild_life_2
 
                 inventoryWindow.Show();
             }
-
-            CheckFruitPickup();
         }
 
-        private void CheckFruitPickup()
+        private void CheckHoutPickup()
         {
+            Image[] houtBundels =
+            {
+              Hout1,
+              Hout2,
+              Hout3,
+              Hout4,
+              Hout5
+    };
+
             Rect playerRect = new Rect(
                 Canvas.GetLeft(Player),
                 Canvas.GetTop(Player),
                 Player.Width,
                 Player.Height);
 
-            Rect fruitRect = new Rect(
-                Canvas.GetLeft(Vrucht),
-                Canvas.GetTop(Vrucht),
-                Vrucht.Width,
-                Vrucht.Height);
-
-            if (playerRect.IntersectsWith(fruitRect))
+            foreach (Image hout in houtBundels)
             {
-                inventory.Add("Appel");
+                if (hout.Visibility != Visibility.Visible)
+                    continue;
 
-                GameCanvas.Children.Remove(Vrucht);
+                Rect houtRect = new Rect(
+                    Canvas.GetLeft(hout),
+                    Canvas.GetTop(hout),
+                    hout.Width,
+                    hout.Height);
 
-                MessageBox.Show("Appel opgepakt!");
+                if (playerRect.IntersectsWith(houtRect))
+                {
+                    hout.Visibility = Visibility.Collapsed;
+                    houtAantal++;
+
+                    if (houtAantal >= 5)
+                    {
+                        Huis.Visibility = Visibility.Visible;
+
+                        MessageBox.Show(
+                            "Je hebt genoeg hout verzameld! " +
+                            "Ga naar het huis om het te bouwen.");
+                    }
+
+                    break;
+                }
             }
         }
+
     }
 }

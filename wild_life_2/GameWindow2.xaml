@@ -8,21 +8,78 @@
         Title="GameWindow" Height="450" Width="800">
     <Canvas x:Name="GameCanvas" Background="LightGreen">
 
-        <Rectangle
-            x:Name="Player"
-            Width="50"
-            Height="50"
-            Fill="Blue"
-            Canvas.Left="100"
-            Canvas.Top="100"/>
+        <Image x:Name="Player"
+         Source="/Images/FemaleCharacter/00_FemaleCharacter.png"
+         Width="50"
+         Height="50"
+         Stretch="Uniform"
+         Canvas.Left="100"
+         Canvas.Top="100"
+         RenderOptions.BitmapScalingMode="NearestNeighbor"/>
 
-        <Rectangle
-    x:Name="Vrucht"
-    Width="50"
-    Height="50"
-    Fill="Red"
-    Canvas.Left="600"
-    Canvas.Top="100"/>
+
+        <!-- Houtbundel 1 -->
+        <Image x:Name="Hout1"
+       Source="/Images/Basic biome/05_Basic Grass Biom things 1.png"
+       Width="32"
+       Height="32"
+       Stretch="Uniform"
+       RenderOptions.BitmapScalingMode="NearestNeighbor"
+       Canvas.Left="164"
+       Canvas.Top="69"/>
+
+        <!-- Houtbundel 2 -->
+        <Image x:Name="Hout2"
+       Source="/Images/Basic biome/05_Basic Grass Biom things 1.png"
+       Width="32"
+       Height="32"
+       Stretch="Uniform"
+       RenderOptions.BitmapScalingMode="NearestNeighbor"
+       Canvas.Left="300"
+       Canvas.Top="150"/>
+
+        <!-- Houtbundel 3 -->
+        <Image x:Name="Hout3"
+       Source="/Images/Basic biome/05_Basic Grass Biom things 1.png"
+       Width="32"
+       Height="32"
+       Stretch="Uniform"
+       RenderOptions.BitmapScalingMode="NearestNeighbor"
+       Canvas.Left="500"
+       Canvas.Top="100"/>
+
+        <!-- Houtbundel 4 -->
+        <Image x:Name="Hout4"
+       Source="/Images/Basic biome/05_Basic Grass Biom things 1.png"
+       Width="32"
+       Height="32"
+       Stretch="Uniform"
+       RenderOptions.BitmapScalingMode="NearestNeighbor"
+       Canvas.Left="200"
+       Canvas.Top="300"/>
+
+        <!-- Houtbundel 5 -->
+        <Image x:Name="Hout5"
+       Source="/Images/Basic biome/05_Basic Grass Biom things 1.png"
+       Width="32"
+       Height="32"
+       Stretch="Uniform"
+       RenderOptions.BitmapScalingMode="NearestNeighbor"
+       Canvas.Left="550"
+       Canvas.Top="320"/>
+
+        <!-- Het huis dat nog gebouwd moet worden -->
+        <Image x:Name="Huis"
+       Source="/Images/Cozy Pixel Art Cottage Sprite.png"
+       Width="100"
+       Height="100"
+       Stretch="Uniform"
+       RenderOptions.BitmapScalingMode="NearestNeighbor"
+       Opacity="100"
+       Visibility="Collapsed"
+       Canvas.Left="20"
+       Canvas.Top="20"/>
+
 
     </Canvas>
 </Window>

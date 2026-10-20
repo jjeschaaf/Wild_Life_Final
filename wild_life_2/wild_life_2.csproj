@@ -9,12 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Basic biome\02_Basic Grass Biom things 1.png" />
+    <None Remove="Images\Basic biome\05_Basic Grass Biom things 1.png" />
     <None Remove="Images\FemaleCharacter\00_FemaleCharacter.png" />
     <None Remove="Images\Fruit_appel\00_Fruit+.png" />
     <None Remove="Images\WildLifeStartScherm2.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Basic biome\02_Basic Grass Biom things 1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Basic biome\05_Basic Grass Biom things 1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\FemaleCharacter\00_FemaleCharacter.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

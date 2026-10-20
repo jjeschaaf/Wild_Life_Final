@@ -46,8 +46,8 @@
 
 
         <Image x:Name="Vrucht"
-              Source="/Images/Fruit_appel/00_Fruit+.png"
-              Width="20"
+              Source="/Images/Basic biome/02_Basic Grass Biom things 1.png"
+              Width="30"
               Height="30"
               Stretch="Uniform"
               RenderOptions.BitmapScalingMode="NearestNeighbor"
