@@ -20,7 +20,7 @@
     x:Name="Vrucht"
     Width="50"
     Height="50"
-    Fill="Red"
+    Fill="Purple"
     Canvas.Left="600"
     Canvas.Top="100"/>
 
