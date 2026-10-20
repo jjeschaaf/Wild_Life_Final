@@ -6,50 +6,96 @@
         xmlns:local="clr-namespace:wild_life_2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="LightGreen">
-        <Image
-            Source="/Images/map2map.png"
-            Stretch="UniformToFill"
-            RenderOptions.BitmapScalingMode="NearestNeighbor" Margin="0,0,0,-73"/>
-        <StackPanel
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center">
+        <Grid>
 
-            <TextBlock
-            Text="WILD LIFE"
-            FontFamily="Press Start 2P"
-            Foreground="#FFB38A"
-            FontSize="64"
-            HorizontalAlignment="Center"
-            Margin="0,0,0,40"/>
+        <Image
+        Source="/Images/WildLifeStartScherm2.png"
+        Stretch="UniformToFill"
+        RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+
+
+        <!-- Menu met knoppen -->
+        <StackPanel
+        Width="298"
+        VerticalAlignment="Top"
+        HorizontalAlignment="Center"
+        Margin="0,205,0,0" Height="195">
 
             <Button
             Content="START"
+            Height="40"
+            Width="250"
+            Margin="0,0,0,10"
             FontFamily="Press Start 2P"
-            Background="LemonChiffon"
-            Width="300"
-            Height="80"
-            FontSize="32"
-            Margin="0,0,0,20"
-            Click="StartButton_Click"/>
+            FontSize="18"
+            Background="#D99A5B"
+            Foreground="Black"
+            BorderBrush="#59351F"
+            BorderThickness="4"
+            Click="StartButton_Click">
+
+
+                <!-- Hover-effect -->
+                <Button.Style>
+                    <Style TargetType="Button">
+
+                        <Setter Property="Background" Value="#D99A5B"/>
+                        <Setter Property="Foreground" Value="Black"/>
+
+                        <Style.Triggers>
+
+                            <Trigger Property="IsMouseOver" Value="True">
+
+                                <Setter Property="Background" Value="#F2C06B"/>
+                                <Setter Property="Foreground" Value="#2F2418"/>
+
+                            </Trigger>
+
+                        </Style.Triggers>
+
+                    </Style>
+                </Button.Style>
+
+            </Button>
+
+            <Button
+            Content="LOAD GAME"
+            Height="40"
+            Width="250"            
+            Margin="0,0,0,10"
+            FontFamily="Press Start 2P"
+            FontSize="14"
+            Background="#D99A5B"
+            Foreground="Black"
+            BorderBrush="#59351F"
+            BorderThickness="4"/>
+
+            <Button
+            Content="NEW GAME"
+            Height="40"
+            Width="250"            
+            Margin="0,0,0,10"
+            FontFamily="Press Start 2P"
+            FontSize="14"
+            Background="#D99A5B"
+            Foreground="Black"
+            BorderBrush="#59351F"
+            BorderThickness="4"/>
 
             <Button
             Content="INSTELLINGEN"
-            FontFamily="Press Start 2P"
-            Background="LemonChiffon"
+            Height="40"
             Width="250"
-            Height="60"
-            FontSize="16"/>
-
-            <Button
-                Content="Afsluiten"
-                FontFamily="Press Start 2P" 
-                Width="50"
-                Height="20"
-                FontSize="5"
-                Margin="0,20,0,20"/>
+            FontFamily="Press Start 2P"
+            FontSize="12"
+            Background="#D99A5B"
+            Foreground="Black"
+            BorderBrush="#59351F"
+            BorderThickness="4"/>
 
         </StackPanel>
 
     </Grid>
+</Window>
+
 </Window>
